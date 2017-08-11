@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/desired_league_bg"
+    android:padding="@dimen/dp16"
+    tools:context="com.hyperdev.swoosh.LeagueActivity">
+
+    <include layout="@layout/layout_logo" />
+
+    <TextView
+        android:id="@+id/tvDesiredLeague"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swooshLogo"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp28"
+        android:layout_marginRight="@dimen/dp28"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/text_desired_league"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnMens"
+        style="@style/SwooshButtonStyle"
+        android:layout_below="@id/tvDesiredLeague"
+        android:text="@string/text_mens"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnWomens"
+        style="@style/SwooshButtonStyle"
+        android:layout_below="@id/btnMens"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/text_womens"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnCoed"
+        style="@style/SwooshButtonStyle"
+        android:layout_below="@id/btnWomens"
+        android:text="@string/text_co_ed"
+        android:textAllCaps="false" />
+
+    <Button
+        style="@style/SwooshButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:enabled="false"
+        android:text="Next" />
+
+</RelativeLayout>

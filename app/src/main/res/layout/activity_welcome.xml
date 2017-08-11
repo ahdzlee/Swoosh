@@ -9,14 +9,7 @@
     android:padding="@dimen/dp16"
     tools:context="com.hyperdev.swoosh.WelcomeActivity">
 
-    <ImageView
-        android:id="@+id/swooshLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp16"
-        app:srcCompat="@drawable/swoosh_logo" />
+    <include layout="@layout/layout_logo" />
 
     <TextView
         android:id="@+id/tvGoAllIn"

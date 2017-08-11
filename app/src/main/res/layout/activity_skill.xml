@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beginner_baller_bg"
+    android:padding="@dimen/dp16"
+    tools:context="com.hyperdev.swoosh.SkillActivity">
+
+    <include layout="@layout/layout_logo" />
+
+    <TextView
+        android:id="@+id/tvIamA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swooshLogo"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp28"
+        android:layout_marginRight="@dimen/dp28"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/text_iAmA"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/skillsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvIamA"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/SwooshButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/text_beginner"
+            android:textAllCaps="false" />
+
+        <Button
+            style="@style/SwooshButtonStyle"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_weight="1"
+            android:text="@string/text_baller"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <Button
+        style="@style/SwooshButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:enabled="false"
+        android:text="Finish" />
+</RelativeLayout>

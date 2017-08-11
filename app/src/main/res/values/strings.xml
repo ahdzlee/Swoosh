@@ -5,4 +5,12 @@
     <string name="text_on_going_all_out">ON GOING ALL OUT</string>
     <string name="text_go_all_in">GO ALL IN</string>
     <string name="text_get_started">Get Started</string>
+    <string name="content_desc_logo">logo</string>
+    <string name="text_desired_league">Desired League:</string>
+    <string name="text_mens">Mens</string>
+    <string name="text_womens">Womens</string>
+    <string name="text_co_ed">Co-ed</string>
+    <string name="text_beginner">Beginner</string>
+    <string name="text_baller">Baller</string>
+    <string name="text_iAmA">I am a:</string>
 </resources>
