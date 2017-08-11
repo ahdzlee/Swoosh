@@ -8,16 +8,14 @@ import android.widget.Button;
 
 import com.hyperdev.swoosh.R;
 import com.hyperdev.swoosh.model.LeagueType;
+import com.hyperdev.swoosh.model.Player;
 import com.hyperdev.swoosh.model.SkillType;
 
 public class SkillActivity extends AppCompatActivity {
 
-    public static final String KEY_SKILL_TYPE = "key-skill-type";
-
     private Button mBtnFinish;
 
-    private String mSkill;
-    private String mDesiredLeague;
+    private Player mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +26,7 @@ public class SkillActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-            mDesiredLeague = intent.getStringExtra(LeagueActivity.KEY_DESIRED_LEAGUE);
+            mPlayer = intent.getParcelableExtra(LeagueActivity.KEY_PLAYER);
         }
     }
 
@@ -46,14 +44,13 @@ public class SkillActivity extends AppCompatActivity {
 
     public void onFinishPressed(View view) {
         Intent intent = new Intent();
-        intent.putExtra(LeagueActivity.KEY_DESIRED_LEAGUE, mDesiredLeague);
-        intent.putExtra(KEY_SKILL_TYPE, mSkill);
+        intent.putExtra(LeagueActivity.KEY_PLAYER, mPlayer);
         setResult(RESULT_OK, intent);
         finish();
     }
 
     public void setSkill(String skill) {
-        mSkill = skill;
+        mPlayer.setSkill(skill);
         mBtnFinish.setEnabled(true);
     }
 }

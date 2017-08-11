@@ -1,6 +1,7 @@
 package com.hyperdev.swoosh.activities;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,10 +10,11 @@ import android.widget.TextView;
 
 import com.hyperdev.swoosh.R;
 import com.hyperdev.swoosh.model.LeagueType;
+import com.hyperdev.swoosh.model.Player;
 
 public class LeagueActivity extends AppCompatActivity {
 
-    public static final String KEY_DESIRED_LEAGUE = "key-desired-league";
+    public static final String KEY_PLAYER = "key-player";
     private static final int REQ_TO_SKILL_SCREEN = 101;
 
     private Button mBtnMens;
@@ -22,7 +24,7 @@ public class LeagueActivity extends AppCompatActivity {
     private TextView mTvSkill;
     private TextView mTvIAmA;
 
-    private String mDesiredLeague;
+    private Player mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class LeagueActivity extends AppCompatActivity {
         setContentView(R.layout.activity_league);
 
         findViews();
+
+        mPlayer = new Player();
     }
 
     private void findViews() {
@@ -55,12 +59,12 @@ public class LeagueActivity extends AppCompatActivity {
 
     public void onNextPressed(View view) {
         Intent intent = new Intent(this, SkillActivity.class);
-        intent.putExtra(KEY_DESIRED_LEAGUE, mDesiredLeague);
+        intent.putExtra(KEY_PLAYER, mPlayer);
         startActivityForResult(intent, REQ_TO_SKILL_SCREEN);
     }
 
     public void setDesiredLeague(String desiredLeague) {
-        mDesiredLeague = desiredLeague;
+        mPlayer.setDesiredLeague(desiredLeague);
         mBtnNext.setEnabled(true);
     }
 
@@ -70,11 +74,10 @@ public class LeagueActivity extends AppCompatActivity {
 
         if (requestCode == REQ_TO_SKILL_SCREEN) {
             if (resultCode == RESULT_OK) {
-                String desiredLeague = data.getStringExtra(KEY_DESIRED_LEAGUE);
-                String skill = data.getStringExtra(SkillActivity.KEY_SKILL_TYPE);
+                Player player = data.getParcelableExtra(KEY_PLAYER);
 
-                updateLeagueUi(desiredLeague);
-                updateSkillUi(skill);
+                updateLeagueUi(player.getDesiredLeague());
+                updateSkillUi(player.getSkill());
             }
         }
     }
