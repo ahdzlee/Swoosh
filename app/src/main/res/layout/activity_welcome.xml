@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_screen_bg"
+    android:padding="@dimen/dp16"
+    tools:context="com.hyperdev.swoosh.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/swooshLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp16"
+        app:srcCompat="@drawable/swoosh_logo" />
+
+    <TextView
+        android:id="@+id/tvGoAllIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swooshLogo"
+        android:layout_marginLeft="@dimen/dp28"
+        android:layout_marginRight="@dimen/dp28"
+        android:layout_marginTop="@dimen/dp48"
+        android:gravity="center"
+        android:text="@string/text_go_all_in"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp64" />
+
+    <TextView
+        android:id="@+id/tvOnGoingAllOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvGoAllIn"
+        android:layout_marginLeft="@dimen/dp28"
+        android:layout_marginRight="@dimen/dp28"
+        android:gravity="center"
+        android:text="@string/text_on_going_all_out"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp32" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOnGoingAllOut"
+        android:layout_marginLeft="@dimen/dp28"
+        android:layout_marginRight="@dimen/dp28"
+        android:layout_marginTop="@dimen/dp16"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/text_description"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/text_get_started" />
+
+</RelativeLayout>

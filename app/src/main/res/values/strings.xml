@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Swoosh</string>
+
+    <string name="text_description"><![CDATA[Find a team in your city & dominate the league]]></string>
+    <string name="text_on_going_all_out">ON GOING ALL OUT</string>
+    <string name="text_go_all_in">GO ALL IN</string>
+    <string name="text_get_started">Get Started</string>
 </resources>
