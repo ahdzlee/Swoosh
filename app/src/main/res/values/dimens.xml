@@ -9,4 +9,6 @@
     <dimen name="sp32">32sp</dimen>
     <dimen name="sp64">64sp</dimen>
     <dimen name="sp18">18sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="dp8">8dp</dimen>
 </resources>

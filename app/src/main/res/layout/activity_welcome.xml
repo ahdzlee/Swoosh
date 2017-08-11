@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/welcome_screen_bg"
     android:padding="@dimen/dp16"
-    tools:context="com.hyperdev.swoosh.WelcomeActivity">
+    tools:context="com.hyperdev.swoosh.activities.WelcomeActivity">
 
     <include layout="@layout/layout_logo" />
 

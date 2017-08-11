@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/beginner_baller_bg"
     android:padding="@dimen/dp16"
-    tools:context="com.hyperdev.swoosh.SkillActivity">
+    tools:context="com.hyperdev.swoosh.activities.SkillActivity">
 
     <include layout="@layout/layout_logo" />
 

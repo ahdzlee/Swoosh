@@ -1,9 +1,11 @@
-package com.hyperdev.swoosh;
+package com.hyperdev.swoosh.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.hyperdev.swoosh.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 

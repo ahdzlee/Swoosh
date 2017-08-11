@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/desired_league_bg"
     android:padding="@dimen/dp16"
-    tools:context="com.hyperdev.swoosh.LeagueActivity">
+    tools:context="com.hyperdev.swoosh.activities.LeagueActivity">
 
     <include layout="@layout/layout_logo" />
 
@@ -49,6 +49,31 @@
         android:onClick="onCoedLeaguePressed"
         android:text="@string/text_co_ed"
         android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tvIamA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCoed"
+        android:layout_marginBottom="@dimen/dp8"
+        android:layout_marginLeft="@dimen/dp28"
+        android:layout_marginRight="@dimen/dp28"
+        android:layout_marginTop="@dimen/dp48"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/text_iAmA"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvSkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvIamA"
+        android:visibility="gone"
+        android:text="My Skill"
+        android:textSize="@dimen/sp16"/>
 
     <Button
         android:id="@+id/btnNext"
