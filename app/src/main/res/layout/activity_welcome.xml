@@ -15,7 +15,7 @@
         android:id="@+id/tvGoAllIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/swooshLogo"
+        android:layout_below="@+id/swooshLogo"
         android:layout_marginLeft="@dimen/dp28"
         android:layout_marginRight="@dimen/dp28"
         android:layout_marginTop="@dimen/dp48"
@@ -54,6 +54,7 @@
         android:id="@+id/btnGetStarted"
         style="@style/SwooshButtonStyle"
         android:layout_alignParentBottom="true"
-        android:text="@string/text_get_started" />
+        android:text="@string/text_get_started"
+        android:onClick="getStartedPressed"/>
 
 </RelativeLayout>

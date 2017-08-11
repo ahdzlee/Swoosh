@@ -14,13 +14,12 @@
         android:id="@+id/tvDesiredLeague"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/swooshLogo"
-        android:layout_marginBottom="@dimen/dp16"
+        android:layout_below="@+id/swooshLogo"
+        android:layout_marginBottom="@dimen/dp48"
         android:layout_marginLeft="@dimen/dp28"
         android:layout_marginRight="@dimen/dp28"
-        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp48"
         android:gravity="center"
-        android:lines="2"
         android:text="@string/text_desired_league"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
@@ -29,6 +28,7 @@
         android:id="@+id/btnMens"
         style="@style/SwooshButtonStyle"
         android:layout_below="@id/tvDesiredLeague"
+        android:onClick="onMensLeaguePressed"
         android:text="@string/text_mens"
         android:textAllCaps="false" />
 
@@ -38,6 +38,7 @@
         android:layout_below="@id/btnMens"
         android:layout_marginBottom="@dimen/dp16"
         android:layout_marginTop="@dimen/dp16"
+        android:onClick="onWomensLeaguePressed"
         android:text="@string/text_womens"
         android:textAllCaps="false" />
 
@@ -45,13 +46,16 @@
         android:id="@+id/btnCoed"
         style="@style/SwooshButtonStyle"
         android:layout_below="@id/btnWomens"
+        android:onClick="onCoedLeaguePressed"
         android:text="@string/text_co_ed"
         android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/btnNext"
         style="@style/SwooshButtonStyle"
         android:layout_alignParentBottom="true"
         android:enabled="false"
+        android:onClick="onNextPressed"
         android:text="Next" />
 
 </RelativeLayout>

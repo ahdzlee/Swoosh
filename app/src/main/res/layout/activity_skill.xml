@@ -14,13 +14,12 @@
         android:id="@+id/tvIamA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/swooshLogo"
-        android:layout_marginBottom="@dimen/dp16"
+        android:layout_below="@+id/swooshLogo"
+        android:layout_marginBottom="@dimen/dp48"
         android:layout_marginLeft="@dimen/dp28"
         android:layout_marginRight="@dimen/dp28"
-        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp48"
         android:gravity="center"
-        android:lines="2"
         android:text="@string/text_iAmA"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
@@ -36,6 +35,7 @@
             style="@style/SwooshButtonStyle"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="onBeginnerPressed"
             android:text="@string/text_beginner"
             android:textAllCaps="false" />
 
@@ -44,13 +44,16 @@
             android:layout_width="0dp"
             android:layout_marginLeft="@dimen/dp16"
             android:layout_weight="1"
+            android:onClick="onBallerPressed"
             android:text="@string/text_baller"
             android:textAllCaps="false" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnFinish"
         style="@style/SwooshButtonStyle"
         android:layout_alignParentBottom="true"
         android:enabled="false"
+        android:onClick="onFinishPressed"
         android:text="Finish" />
 </RelativeLayout>
