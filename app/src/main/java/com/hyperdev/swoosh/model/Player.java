@@ -5,19 +5,25 @@ import android.os.Parcelable;
 
 public class Player implements Parcelable {
 
+    @LeagueType
     private String mDesiredLeague;
+
+    @SkillType
     private String mSkill;
 
     public Player() {
     }
 
-    public Player(String desiredLeague, String skill) {
+    public Player(@LeagueType String desiredLeague, @SkillType String skill) {
         mDesiredLeague = desiredLeague;
         mSkill = skill;
     }
 
     protected Player(Parcel in) {
+        //noinspection WrongConstant - this is safe and we are sure that this is a valid LeagueType
         mDesiredLeague = in.readString();
+
+        //noinspection WrongConstant - this is safe and we are sure that this is a valid SkillType
         mSkill = in.readString();
     }
 
@@ -33,19 +39,21 @@ public class Player implements Parcelable {
         }
     };
 
+    @LeagueType
     public String getDesiredLeague() {
         return mDesiredLeague;
     }
 
-    public void setDesiredLeague(String desiredLeague) {
+    public void setDesiredLeague(@LeagueType String desiredLeague) {
         mDesiredLeague = desiredLeague;
     }
 
+    @SkillType
     public String getSkill() {
         return mSkill;
     }
 
-    public void setSkill(String skill) {
+    public void setSkill(@SkillType String skill) {
         mSkill = skill;
     }
 

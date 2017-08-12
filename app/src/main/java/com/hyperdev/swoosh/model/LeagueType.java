@@ -1,8 +1,20 @@
 package com.hyperdev.swoosh.model;
 
-public class LeagueType {
+import android.support.annotation.StringDef;
 
-    public static final String MENS = "Mens";
-    public static final String WOMENS = "Womens";
-    public static final String COED = "Co-ed";
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import static com.hyperdev.swoosh.model.LeagueType.COED;
+import static com.hyperdev.swoosh.model.LeagueType.MENS;
+import static com.hyperdev.swoosh.model.LeagueType.NONE;
+import static com.hyperdev.swoosh.model.LeagueType.WOMENS;
+
+@Retention(RetentionPolicy.SOURCE)
+@StringDef({NONE, MENS, WOMENS, COED})
+public @interface LeagueType {
+    String NONE = "None";
+    String MENS = "Mens";
+    String WOMENS = "Womens";
+    String COED = "Co-ed";
 }

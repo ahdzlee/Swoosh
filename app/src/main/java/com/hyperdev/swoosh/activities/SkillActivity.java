@@ -49,7 +49,7 @@ public class SkillActivity extends AppCompatActivity {
         finish();
     }
 
-    public void setSkill(String skill) {
+    public void setSkill(@SkillType String skill) {
         mPlayer.setSkill(skill);
         mBtnFinish.setEnabled(true);
     }

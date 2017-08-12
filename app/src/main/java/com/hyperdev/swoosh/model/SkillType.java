@@ -1,7 +1,18 @@
 package com.hyperdev.swoosh.model;
 
-public class SkillType {
+import android.support.annotation.StringDef;
 
-    public static final String BEGINNER = "Beginner";
-    public static final String BALLER = "Baller";
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import static com.hyperdev.swoosh.model.SkillType.NONE;
+import static com.hyperdev.swoosh.model.SkillType.BALLER;
+import static com.hyperdev.swoosh.model.SkillType.BEGINNER;
+
+@Retention(RetentionPolicy.SOURCE)
+@StringDef({NONE, BEGINNER, BALLER})
+public @interface SkillType {
+    String NONE = "None";
+    String BEGINNER = "Beginner";
+    String BALLER = "Baller";
 }

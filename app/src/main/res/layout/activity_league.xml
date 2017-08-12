@@ -73,7 +73,7 @@
         android:layout_below="@id/tvIamA"
         android:visibility="gone"
         android:text="My Skill"
-        android:textSize="@dimen/sp16"/>
+        android:textSize="@dimen/sp32"/>
 
     <Button
         android:id="@+id/btnNext"

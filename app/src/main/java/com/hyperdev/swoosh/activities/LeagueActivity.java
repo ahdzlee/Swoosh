@@ -63,7 +63,7 @@ public class LeagueActivity extends AppCompatActivity {
         startActivityForResult(intent, REQ_TO_SKILL_SCREEN);
     }
 
-    public void setDesiredLeague(String desiredLeague) {
+    public void setDesiredLeague(@LeagueType String desiredLeague) {
         mPlayer.setDesiredLeague(desiredLeague);
         mBtnNext.setEnabled(true);
     }
